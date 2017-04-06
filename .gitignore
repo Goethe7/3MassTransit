@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 build_output/*
 build_artifacts/*
 *.suo
@@ -38,3 +39,7 @@ doc/build/*
 .DS_Store
 
 nuspecs/
+=======
+# Add any directories, files, or patterns you don't want to be tracked by version control
+*Supercharger*
+>>>>>>> refs/remotes/origin/master
