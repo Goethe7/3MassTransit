@@ -1,10 +1,12 @@
-﻿using System;
-using System.Threading;
-using Contracts;
-using MassTransit;
-
-namespace OrderApproval
+﻿namespace OrderApproval
 {
+    using System;
+    using System.Threading;
+
+    using Contracts;
+
+    using MassTransit;
+
     public class ApproveConsumer : Consumes<IApproveOrder>.All
     {
         private readonly IServiceBus bus;

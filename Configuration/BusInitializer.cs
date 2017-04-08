@@ -5,24 +5,24 @@ using System;
 
 namespace Configuration
 {
-  public class BusInitializer
-  {
-    public static IServiceBus CreateBus(string queueName, Action<ServiceBusConfigurator> moreInitialization)
+    public class BusInitializer
     {
-      Log4NetLogger.Use();
-      var bus = ServiceBusFactory.New(x =>
-      {
-        x.UseRabbitMq();
-        x.ReceiveFrom(GetUri(queueName));
-        moreInitialization(x);
-      });
+        public static IServiceBus CreateBus(string queueName, Action<ServiceBusConfigurator> moreInitialization)
+        {
+            Log4NetLogger.Use();
+            var bus = ServiceBusFactory.New(x =>
+            {
+                x.UseRabbitMq();
+                x.ReceiveFrom(GetUri(queueName));
+                moreInitialization(x);
+            });
 
-      return bus;
+            return bus;
+        }
+
+        public static Uri GetUri(string queueName)
+        {
+            return new Uri("rabbitmq://localhost/" + queueName);
+        }
     }
-
-      public static Uri GetUri(string queueName)
-      {
-          return new Uri("rabbitmq://localhost/" + queueName);
-      }
-  }
 }

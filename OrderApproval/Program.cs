@@ -1,10 +1,13 @@
-﻿using System;
-using Autofac;
-using Configuration;
-using MassTransit;
-
-namespace OrderApproval
+﻿namespace OrderApproval
 {
+    using System;
+
+    using Autofac;
+
+    using Configuration;
+
+    using MassTransit;
+
     class Program
     {
         static void Main(string[] args)

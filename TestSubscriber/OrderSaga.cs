@@ -1,11 +1,14 @@
-﻿using System;
-using Contracts;
-using Magnum.StateMachine;
-using MassTransit;
-using MassTransit.Saga;
-
-namespace OrderSaga
+﻿namespace OrderSaga
 {
+    using System;
+
+    using Contracts;
+
+    using Magnum.StateMachine;
+
+    using MassTransit;
+    using MassTransit.Saga;
+
     public class OrderSaga: SagaStateMachine<OrderSaga>, ISaga
     {
         static OrderSaga()
@@ -13,7 +16,7 @@ namespace OrderSaga
             Define(() =>
             {
                 Initially(
-                    When((Create))
+                    When(Create)
                         .Then((saga, message) => Console.WriteLine("{0}: Order created, sending approval request", message.What))
                         .Publish((saga, message) => new ApproveOrder { Text = message.What, CorrelationId = saga.CorrelationId })
                         .TransitionTo(Approve));
