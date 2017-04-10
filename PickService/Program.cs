@@ -1,11 +1,14 @@
-﻿using System;
-using Autofac;
-using Configuration;
-using MassTransit;
-
-namespace PickService
+﻿namespace PickService
 {
-    class Program
+    using System;
+
+    using Autofac;
+
+    using Configuration;
+
+    using MassTransit;
+
+    public class Program
     {
         static void Main(string[] args)
         {

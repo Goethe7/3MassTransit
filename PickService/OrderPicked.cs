@@ -1,9 +1,9 @@
-﻿using System;
-using Contracts;
-
-namespace PickService
+﻿namespace PickService
 {
-    public class OrderPicked: IPicked
+    using System;
+    using Contracts;
+
+    public class OrderPicked : IPicked
     {
         public Guid CorrelationId { get; set; }
         public string Text { get; set; }

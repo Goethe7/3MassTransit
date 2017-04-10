@@ -1,9 +1,10 @@
-﻿using System;
-using MassTransit;
-
-namespace Contracts
+﻿namespace Contracts
 {
-  public interface IOrder: CorrelatedBy<Guid>
+    using System;
+
+    using MassTransit;
+
+    public interface IOrder : CorrelatedBy<Guid>
   {
     string What { get; }
     DateTime When { get; }

@@ -1,10 +1,11 @@
-﻿using MassTransit;
-using MassTransit.BusConfigurators;
-using MassTransit.Log4NetIntegration.Logging;
-using System;
-
-namespace Configuration
+﻿namespace Configuration
 {
+    using System;
+
+    using MassTransit;
+    using MassTransit.BusConfigurators;
+    using MassTransit.Log4NetIntegration.Logging;
+
     public class BusInitializer
     {
         public static IServiceBus CreateBus(string queueName, Action<ServiceBusConfigurator> moreInitialization)

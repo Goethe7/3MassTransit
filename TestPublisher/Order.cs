@@ -1,8 +1,9 @@
-﻿using System;
-using Contracts;
-
-namespace OrderSender
+﻿namespace OrderSender
 {
+    using System;
+
+    using Contracts;
+
     public class Order : IOrder
     {
         public string What { get; set; }

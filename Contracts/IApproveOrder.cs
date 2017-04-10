@@ -1,9 +1,10 @@
-﻿using System;
-using MassTransit;
-
-namespace Contracts
+﻿namespace Contracts
 {
-    public interface IApproveOrder: CorrelatedBy<Guid>
+    using System;
+
+    using MassTransit;
+
+    public interface IApproveOrder : CorrelatedBy<Guid>
     {
         string Text { get; set; } 
     }

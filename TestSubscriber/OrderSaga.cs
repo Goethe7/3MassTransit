@@ -1,15 +1,12 @@
 ﻿namespace OrderSaga
 {
     using System;
-
     using Contracts;
-
     using Magnum.StateMachine;
-
     using MassTransit;
     using MassTransit.Saga;
 
-    public class OrderSaga: SagaStateMachine<OrderSaga>, ISaga
+    public class OrderSaga : SagaStateMachine<OrderSaga>, ISaga
     {
         static OrderSaga()
         {

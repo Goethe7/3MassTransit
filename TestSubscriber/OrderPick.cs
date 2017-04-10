@@ -3,7 +3,7 @@ using Contracts;
 
 namespace OrderSaga
 {
-    public class OrderPick: IPick
+    public class OrderPick : IPick
     {
         public string What { get; set; }
 
