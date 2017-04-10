@@ -1,7 +1,6 @@
 ﻿namespace OrderSender
 {
     using System;
-
     using Configuration;
 
     internal class Program

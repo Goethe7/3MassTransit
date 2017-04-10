@@ -1,11 +1,10 @@
-﻿using System;
-
-using Configuration;
-using MassTransit;
-using MassTransit.Saga;
-
-namespace OrderSaga
+﻿namespace OrderSaga
 {
+    using System;
+    using Configuration;
+    using MassTransit;
+    using MassTransit.Saga;
+
     internal class Program
     {
         private static void Main(string[] args)

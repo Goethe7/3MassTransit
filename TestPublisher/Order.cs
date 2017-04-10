@@ -1,7 +1,6 @@
 ﻿namespace OrderSender
 {
     using System;
-
     using Contracts;
 
     public class Order : IOrder
