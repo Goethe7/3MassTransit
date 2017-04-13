@@ -38,12 +38,10 @@
 
         public Guid CorrelationId { get; set; }
         public IServiceBus Bus { get; set; }
-
         public static State Initial { get; set; }
         public static State Approve { get; set; }
         public static State Pick { get; set; }
         public static State Completed { get; set; }
-
         public static Event<IOrder> Create { get; set; }
         public static Event<IOrderApproved> Approved { get; set; }
         public static Event<IOrderRejected> Rejected { get; set; }
