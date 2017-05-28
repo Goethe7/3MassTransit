@@ -6,7 +6,7 @@
     using MassTransit;
     using MassTransit.Saga;
 
-    // OrderSaga
+    // OrderSaga --
 
     public class OrderSaga : SagaStateMachine<OrderSaga>, ISaga
     {
