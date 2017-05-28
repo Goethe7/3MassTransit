@@ -1,7 +1,6 @@
 ﻿namespace Configuration
 {
     using System;
-
     using MassTransit;
     using MassTransit.BusConfigurators;
     using MassTransit.Log4NetIntegration.Logging;
