@@ -38,15 +38,21 @@
             CorrelationId = correlationId;
         }
 
-        public Guid CorrelationId { get; set; }
+        public Guid CorrelationId { get; private set; }
         public IServiceBus Bus { get; set; }
         public static State Initial { get; set; }
-        public static State Approve { get; set; }
-        public static State Pick { get; set; }
+        
+        private static State Approve => null;
+
+        private static State Pick => null;
+
         public static State Completed { get; set; }
-        public static Event<IOrder> Create { get; set; }
-        public static Event<IOrderApproved> Approved { get; set; }
-        public static Event<IOrderRejected> Rejected { get; set; }
-        public static Event<IPicked> Picked { get; set; }
+        private static Event<IOrder> Create => null;
+
+        private static Event<IOrderApproved> Approved => null;
+
+        private static Event<IOrderRejected> Rejected => null;
+
+        private static Event<IPicked> Picked => null;
     }
 }
