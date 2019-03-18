@@ -1,11 +1,8 @@
 ﻿namespace PickService
 {
     using System;
-
     using Autofac;
-
     using Configuration;
-
     using MassTransit;
 
     public class Program
